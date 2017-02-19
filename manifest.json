@@ -1,0 +1,12 @@
+{
+    "name": "hn_debias",
+    "manifest_version" : 2,
+    "version": "0.1",
+    "description": "Remove the effect of voting on hacker news comments",
+    "permissions": ["https://news.ycombinator.com"],
+    "content_scripts" : [{
+        "matches" : [ "https://news.ycombinator.com/item*"],
+        "js" : ["src/hn_debias.js"],
+        "css" : ["src/hn_debias.css"]
+    }]
+}
